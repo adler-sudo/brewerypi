@@ -126,10 +126,10 @@ def migrate(enable_all_users, infer_attribute_templates, set_user_ids_to_pi_user
 
 		print('Setting UserId to "{}" for all Notes...'.format(piUser.Name))
 		for note in Note.query.all():
-			Note.UserId = piUser.UserId
+			note.UserId = piUser.UserId
 		db.session.commit()
 
 		print('Setting UserId to "{}" for all TagValues...'.format(piUser.Name))
 		for tagValue in TagValue.query.all():
-			TagValue.UserId = piUser.UserId
+			tagValue.UserId = piUser.UserId
 		db.session.commit()
