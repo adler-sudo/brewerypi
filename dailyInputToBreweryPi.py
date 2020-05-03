@@ -16,9 +16,9 @@ import pandas as pd
 
 
 # connect to db and establish cursor
-db = MySQLdb.connect(user="pi",
-                     passwd="brewery",
-                     host="10.0.0.137",
+db = MySQLdb.connect(user=<USER>,
+                     passwd=<PASSWORD>,
+                     host=<HOST>,
                      db="BreweryPi"
                      )
 cursor = db.cursor()
